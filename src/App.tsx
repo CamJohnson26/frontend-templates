@@ -4,6 +4,7 @@ import './App.css';
 import {CJDialog} from "./screens/CJDialog";
 import {ImportText} from "./utilities/ImportText";
 import {RouteBar} from "./navigation/RouteBar";
+import {NavigableList} from "./navigation/NavigableList";
 
 function App() {
   return (
@@ -22,6 +23,17 @@ function App() {
           ]} />
           <h1>Frontend Templates</h1>
           <h2>CJDialog</h2>
+
+          <NavigableList items={[
+              {
+                  name: 'First',
+                  id: '1'
+              },
+              {
+                  name: 'Second',
+                  id: '2'
+              }
+          ]} onClick={(item) => alert(`${item} clicked`)} />
           <CJDialog title={'My Modal'} buttonTitle={'Open Dialog'}>
               Dialog Content
           </CJDialog>
