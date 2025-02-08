@@ -5,6 +5,8 @@ import {CJDialog} from "./screens/CJDialog";
 import {ImportText} from "./utilities/ImportText";
 import {RouteBar} from "./navigation/RouteBar";
 import {NavigableList} from "./navigation/NavigableList";
+import {TextField} from "@mui/material";
+import {TextInput} from "./inputs/TextInput";
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
           </CJDialog>
           <h2>Import Text</h2>
           <ImportText onImport={(text) => alert(text)}/>
+          <h2>Inputs</h2>
+          <TextInput onChange={(text) =>alert('Text Changed: '+ text)} />
       </div>
   );
 }
